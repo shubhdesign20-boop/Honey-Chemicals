@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+@theme {
+  --color-brand-red: #BC2E3D;
+  --color-brand-grey: #55595C;
+  --animate-spin-slow: spin 12s linear infinite;
+  --animate-pulse-slow: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@layer utilities {
+  .clip-path-industrial {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%);
+  }
+}

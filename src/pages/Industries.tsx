@@ -170,6 +170,47 @@ const INDUSTRIES = [
     ]
   },
   {
+    name: "Poultry Feed Industries",
+    description: "In poultry feed manufacturing, calcium carbonate is an irreplaceable dietary mineral. It is crucial for developing strong, crack-resistant eggshells, maintaining skeleton bone density in laying hens, and optimizing feed conversion ratios.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1fa1L2cq1b8HRACC2s0X5LBD44MyO4vTpijGbPqLb3kgmgyUQVo_ESorh&s=10",
+    grades: [
+      {
+        category: "Indian Ground - Uncoated (Coarse & Fine Grit)",
+        items: [
+          "UNIT (Coarse Grit) – Optimal particle size for slow-release calcium in continuous eggshell formation.",
+          "UNIT (Fine Powder) – High-absorbency mineral dosing for standard poultry mash mixes."
+        ]
+      },
+      {
+        category: "Imported Ground - Uncoated",
+        items: [
+          "BC10T, BC20T – Ultra-pure, highly bioavailable feed-grade calcium carbonate for broiler and breeder poultry diets."
+        ]
+      }
+    ]
+  },
+  {
+    name: "Road Marking Paint",
+    description: "In thermoplastic and liquid road marking paints, calcium carbonate acts as a crucial functional filler. It provides excellent wear resistance, exceptional whiteness, daytime visibility, and optimal mechanical bond strength to the asphalt surface, meeting strict highway performance standards.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKiVhzF3xatoJeryv7T-dYDX3hagHNl1iYr2WfbxRPCPx6A8G6mcgzxa4J&s=10",
+    grades: [
+      {
+        category: "Indian Ground - Coated & Uncoated",
+        items: [
+          "UNIT (Fine / Coarse) – Controlled particle size distribution to achieve the precise viscosity, density, and retroreflectivity limits.",
+          "UNIT – Highly stable grade resisting weather variations and thermal shock on high-volume roads."
+        ]
+      },
+      {
+        category: "Imported Ground - Coated & Uncoated",
+        items: [
+          "VT100C, VT200C – Ultra-white premium imported grades improving paint durability, flow properties, and wear life.",
+          "BC10T, BC20T – Advanced high-brightness calcium carbonate contributing to enhanced daytime visibility and low processing wear."
+        ]
+      }
+    ]
+  },
+  {
     name: "Agro Chemicals",
     description: "Calcium carbonate is commonly used in agrochemical formulations as a pH regulator, anti-caking agent, and carrier for active ingredients. It helps improve product stability and enhances soil conditioning properties.",
     image: "https://blog.sathguru.com/wp-content/uploads/2021/01/Opportunity-for-India-becoming-a-global-agro-chemical-manufacturing-hub.jpg",

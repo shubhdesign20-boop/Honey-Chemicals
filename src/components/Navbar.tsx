@@ -34,57 +34,29 @@ export const Navbar = () => {
     { name: "About", href: "/about" },
   ];
 
-  const productLinks = [
+  const productLinks: { name: string; href: string; subItems?: { name: string; href: string }[] }[] = [
     { 
       name: "Calcite Powder", 
-      href: "/product/calcite",
-      subItems: [
-        { name: "Calcite Uncoated Calcium Carbonate", href: "/product/calcite-uncoated" },
-        { name: "Calcite Coated Calcium Carbonate", href: "/product/calcite-coated" },
-      ]
+      href: "/product/calcite"
     },
     { 
-      name: "Dolomite Powder", 
-      href: "/product/dolomite",
-      subItems: [
-        { name: "Dolomite Uncoated Calcium Carbonate", href: "/product/dolomite-uncoated" },
-        { name: "Dolomite Coated Calcium Carbonate", href: "/product/dolomite-coated" },
-      ]
+      name: "WHITE Dolomite Powder", 
+      href: "/product/dolomite"
     },
     { 
-      name: "Indigenous Calcium Carbonate", 
-      href: "/product/indigenous-calcium-carbonate",
-      subItems: [
-        { name: "Indigenous Uncoated Calcium Carbonate", href: "/product/indigenous-uncoated" },
-        { name: "Indigenous Coated Calcium Carbonate", href: "/product/indigenous-coated" },
-      ]
+      name: "Grey Dolomite Powder", 
+      href: "/product/grey-dolomite"
     },
     { 
-      name: "Vietnam Calcium Carbonate", 
-      href: "/product/vietnam-calcium-carbonate",
-      subItems: [
-        { name: "Vietnam Uncoated Calcium Carbonate", href: "/product/vietnam-uncoated" },
-        { name: "Vietnam Coated Calcium Carbonate", href: "/product/vietnam-coated" },
-      ]
+      name: "Limestone Powder", 
+      href: "/product/limestone"
     },
     { 
-      name: "Egypt Calcium Carbonate", 
-      href: "/product/egypt-calcium-carbonate",
-      subItems: [
-        { name: "Egypt Uncoated Calcium Carbonate", href: "/product/egypt-uncoated" },
-        { name: "Egypt Coated Calcium Carbonate", href: "/product/egypt-coated" },
-      ]
+      name: "Calcium Carbonate", 
+      href: "/product/calcium-carbonate"
     },
-    { 
-      name: "Malaysia Calcium Carbonate", 
-      href: "/product/malaysia-calcium-carbonate",
-      subItems: [
-        { name: "Malaysia Uncoated Calcium Carbonate", href: "/product/malaysia-uncoated" },
-        { name: "Malaysia Coated Calcium Carbonate", href: "/product/malaysia-coated" },
-      ]
-    },
+    { name: "Marble Chips", href: "/product/marble-chips" },
     { name: "Marbles Lumps", href: "/product/marbles-lumps" },
-    { name: "Marble Blocks", href: "/product/marble-blocks" },
   ];
 
   const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);

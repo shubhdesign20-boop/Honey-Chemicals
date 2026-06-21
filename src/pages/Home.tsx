@@ -16,6 +16,7 @@ import {
   Package,
 } from "lucide-react";
 import { motion, animate } from "motion/react";
+import { IndustrialWatermark } from "../components/IndustrialWatermark";
 
 const StatCounter = ({ value, suffix = "+" }: { value: number; suffix?: string }) => {
   const [displayValue, setDisplayValue] = React.useState(0);
@@ -48,39 +49,39 @@ const PRODUCTS = [
   },
   {
     id: "dolomite",
-    name: "DOLOMITE POWDER",
+    name: "WHITE DOLOMITE POWDER",
     description: "Sourced from high-quality deposits, processed for optimal magnesium content and thermal stability across sectors.",
     image: "https://lh3.googleusercontent.com/d/1i9kT8A62hrPNmS2Nf6UBFZTwBCugNQyN",
     specs: ["Brightness: 96-96.5", "SiO2: <2.50%", "High MgCO3 Pure"]
   },
   {
-    id: "indigenous-calcium-carbonate",
-    name: "INDIGENOUS CALCIUM CARBONATE",
-    description: "Premium indigenous calcium carbonate processed for high whiteness and consistent particle size.",
-    image: "https://lh3.googleusercontent.com/d/1DLtW_PB8HZHmlA8gtRv1vTMkaMTbQzg6",
-    specs: ["High Whiteness", "Cost Effective", "Local Source"]
+    id: "grey-dolomite",
+    name: "GREY DOLOMITE POWDER",
+    description: "Industrial-grade raw grey dolomite powder high in magnesium and mechanical durability, optimized for metallurgy, refractories, and agriculture, delivering exceptional cost efficiency.",
+    image: "https://lh3.googleusercontent.com/d/1M8__CnPpxU3CV2tKwE0wB3X8HlXvP7Vu",
+    specs: ["MgO: 19.5% - 21.0%", "CaO: 29.5% - 31.0%", "Specific Gravity: 2.84"]
   },
   {
-    id: "vietnam-calcium-carbonate",
-    name: "VIETNAM CALCIUM CARBONATE",
+    id: "limestone",
+    name: "LIMESTONE POWDER",
+    description: "Meticulously processed high-grade sedimentary mineral high in CaCO3, ideal for cement production, environmental buffering, and animal feed stability.",
+    image: "https://lh3.googleusercontent.com/d/1p8PEDBWWaw78kwiLaEClPDnPc2aZQJTO",
+    specs: ["Highly Reactive", "High Calcium", "Consistent Sizing"]
+  },
+  {
+    id: "calcium-carbonate",
+    name: "CALCIUM CARBONATE",
+    description: "Premium industrial-grade calcium carbonate of unmatched crystalline purity, ideal for plastics compounding, masterbatches, paper, and advanced coatings.",
+    image: "https://lh3.googleusercontent.com/d/15cPGXC3BUAWXtBX7HjaF5PGm9HoZr7G_",
+    specs: ["CaCO3: > 98.2%", "Whiteness: 96.5% - 98%", "Low Silica Content"]
+  },
+  {
+    id: "marble-chips",
+    name: "MARBLE CHIPS",
     isPremium: true,
-    description: "Imported from premium Vietnam quarries, known for ultra-high brightness and exceptional chemical purity.",
-    image: "https://lh3.googleusercontent.com/d/1Ge6d8OhjofOO4NL02ZcpTpO4c3GCwawB",
-    specs: ["Brightness: 97%+", "Purity: Absolute", "Import Grade"]
-  },
-  {
-    id: "egypt-calcium-carbonate",
-    name: "EGYPT CALCIUM CARBONATE",
-    description: "Sourced from Egyptian deposits, offering unique structural properties and superior whiteness.",
-    image: "https://lh3.googleusercontent.com/d/1khS7AzSRLqgJCccXRlUaRinTkI-7GhOq",
-    specs: ["CaCO3: 99%+", "Low Oil Absorption", "Egyptian Origin"]
-  },
-  {
-    id: "malaysia-calcium-carbonate",
-    name: "MALAYSIA CALCIUM CARBONATE",
-    description: "Malaysian origin mineral known for its excellent dispersion and mechanical reinforcement.",
-    image: "https://lh3.googleusercontent.com/d/1WzOpBpeCBfAbcFKyu-rMbPQJD3X66nge",
-    specs: ["Up to 5000 Mesh", "Reinforcement Grade", "Excellent Dispersion"]
+    description: "Premium white crushed marble chips of high brightness and uniform fractions, perfect for terrazzo, landscaping and architectural builds.",
+    image: "https://lh3.googleusercontent.com/d/1z2iHy-q20jeYskcwc_vatuTrUvaraTND",
+    specs: ["Sizing: Sorted Fractions", "CaCO3: 95-99%", "Optimal Durability"]
   },
   {
     id: "marbles-lumps",
@@ -88,13 +89,6 @@ const PRODUCTS = [
     description: "Premium marble lumps sourced from exclusive mining assets, known for rich texture and high purity.",
     image: "https://lh3.googleusercontent.com/d/1zCtin3DKpPiI1GScGiqv5PyW1PswecnA",
     specs: ["CaCO3: 95-99%", "Crystalline Texture", "High Reserve Capacity"]
-  },
-  {
-    id: "marble-blocks",
-    name: "MARBLE BLOCKS",
-    description: "Solid chunks of natural marble, sourced directly from quarries for construction and art.",
-    image: "https://lh3.googleusercontent.com/d/1DhacyVSJnmZ5LYyXzIQftOGHx8QZNqQ_",
-    specs: ["Strength & Durability", "Custom Sizes", "Eco-Friendly Sourcing"]
   }
 ];
 
@@ -141,10 +135,10 @@ const Home = () => {
           >
 
             
-            <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.1] mb-8 uppercase italic">
-              Leading Producer of <br />
-              <span className="text-red-700">Premium Ultrafine</span> <br />
-              Minerals
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white leading-[1.1] mb-8 uppercase italic">
+              Superior Mineral <br />
+              <span className="text-red-700">Solutions</span> <br />
+              for Every Industry
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-300 mb-10 max-w-2xl leading-relaxed">
@@ -295,7 +289,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
+       {/* Stats Section */}
       <section className="bg-slate-50 py-24 relative overflow-hidden">
         {/* Animated Background Elements */}
         <motion.div 
@@ -316,6 +310,10 @@ const Home = () => {
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
           className="absolute -bottom-24 -right-24 w-96 h-96 bg-red-950 rounded-full blur-[120px]"
         />
+
+        {/* Industrial Watermark Background */}
+        <IndustrialWatermark className="absolute bottom-0 right-[5%] w-[45%] h-[90%] pointer-events-none opacity-[0.06] select-none" />
+        <IndustrialWatermark className="absolute top-0 left-[2%] w-[35%] h-[75%] pointer-events-none opacity-[0.04] scale-x-[-1] select-none" />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -383,12 +381,6 @@ const Home = () => {
                 className="group flex flex-col"
               >
                 <Link to={`/product/${product.id}`} className="block relative aspect-[4/3] rounded-2xl overflow-hidden mb-6 shadow-md transition-transform duration-500 group-hover:-translate-y-2">
-                  {product.isPremium && (
-                    <div className="absolute top-4 right-4 bg-red-700 text-white text-[10px] font-black px-3 py-1 rounded-full z-20 flex items-center shadow-lg">
-                      <Diamond className="w-3 h-3 mr-1" />
-                      PREMIUM
-                    </div>
-                  )}
                   <img 
                     src={product.image} 
                     alt={product.name} 
@@ -720,7 +712,7 @@ const Home = () => {
               
               <div className="rounded-[3rem] overflow-hidden shadow-2xl relative z-10 border-8 border-white">
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2000&auto=format&fit=crop" 
+                  src="https://lh3.googleusercontent.com/d/1MeIbaXiFaA3XTe6J3X8ngpItr89UPGIm" 
                   alt="Modern Processing Units" 
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                   referrerPolicy="no-referrer"
@@ -728,64 +720,6 @@ const Home = () => {
               </div>
               <div className="absolute -top-10 -right-10 w-64 h-64 bg-red-700/10 rounded-full blur-3xl -z-10"></div>
               <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-slate-900/10 rounded-full blur-3xl -z-10"></div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Partners Slider */}
-      <section className="py-20 bg-slate-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 mb-12 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <p className="text-red-700 font-bold uppercase tracking-[0.3em] text-sm mb-2">OUR</p>
-            <h2 className="text-4xl md:text-5xl font-black text-slate-900 uppercase italic">PARTNER</h2>
-          </motion.div>
-        </div>
-
-        <div className="relative">
-          {/* Gradients for smooth fade out at edges */}
-          <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none"></div>
-          
-          <div className="flex w-[200%] gap-12 items-center">
-            <motion.div 
-              className="flex gap-12 items-center min-w-full"
-              animate={{ x: [0, "-100%"] }}
-              transition={{
-                duration: 40,
-                repeat: Infinity,
-                ease: "linear"
-              }}
-            >
-              {[
-                { name: "SUNIL ENTERPRISE", color: "bg-white" },
-                { name: "RKM INDUSTRIES", color: "bg-white" },
-                { name: "KRISH CHEMICALS", color: "bg-white" },
-                { name: "SVG INTERNATIONAL", color: "bg-white" },
-                { name: "SRISHTI CERAMICS", color: "bg-white" },
-                { name: "MINAXI MINERALS", color: "bg-white" },
-              ].map((logo, idx) => (
-                <div key={`${logo.name}-${idx}`} className="flex-shrink-0 px-12 py-8 bg-white border border-slate-100 rounded-xl shadow-sm flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-500 min-w-[200px] h-[100px]">
-                  <span className="text-slate-400 font-bold text-lg tracking-tighter whitespace-nowrap">{logo.name}</span>
-                </div>
-              ))}
-              {/* Duplicate for seamless infinite loop */}
-              {[
-                { name: "SUNIL ENTERPRISE", color: "bg-white" },
-                { name: "RKM INDUSTRIES", color: "bg-white" },
-                { name: "KRISH CHEMICALS", color: "bg-white" },
-                { name: "SVG INTERNATIONAL", color: "bg-white" },
-                { name: "SRISHTI CERAMICS", color: "bg-white" },
-                { name: "MINAXI MINERALS", color: "bg-white" },
-              ].map((logo, idx) => (
-                <div key={`${logo.name}-clone-${idx}`} className="flex-shrink-0 px-12 py-8 bg-white border border-slate-100 rounded-xl shadow-sm flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-500 min-w-[200px] h-[100px]">
-                  <span className="text-slate-400 font-bold text-lg tracking-tighter whitespace-nowrap">{logo.name}</span>
-                </div>
-              ))}
             </motion.div>
           </div>
         </div>

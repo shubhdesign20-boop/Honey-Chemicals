@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Factory, Cpu, Zap, Truck } from "lucide-react";
+import { IndustrialWatermark } from "../components/IndustrialWatermark";
 
 const Infrastructure = () => {
   const assets = [
@@ -27,7 +28,11 @@ const Infrastructure = () => {
         </div>
       </section>
 
-      <section className="py-24">
+      <section className="py-24 relative overflow-hidden">
+        {/* Subtle Industrial Watermark Background */}
+        <IndustrialWatermark className="absolute bottom-0 right-[2%] w-[45%] h-[80%] pointer-events-none opacity-[0.05] select-none" />
+        <IndustrialWatermark className="absolute top-0 left-[2%] w-[35%] h-[60%] pointer-events-none opacity-[0.03] scale-x-[-1] select-none" />
+
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center mb-24">
             <motion.div
@@ -37,7 +42,7 @@ const Infrastructure = () => {
               className="order-2 md:order-1"
             >
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2000&auto=format&fit=crop" 
+                src="https://lh3.googleusercontent.com/d/1MeIbaXiFaA3XTe6J3X8ngpItr89UPGIm" 
                 alt="Honey Chemicals Processing Unit - Modern Facility" 
                 className="rounded-3xl shadow-2xl transition-all duration-700"
                 referrerPolicy="no-referrer"

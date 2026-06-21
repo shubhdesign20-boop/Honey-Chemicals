@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "motion/react";
 import { ArrowLeft, ChevronLeft, ChevronRight, Package, Table as TableIcon, Lightbulb, CheckCircle2, Diamond } from "lucide-react";
 
@@ -54,12 +54,12 @@ const PRODUCT_DATA: Record<string, any> = {
     packing: "Available in 25kgs, 50kgs, and 1 Ton Jumbo Bags"
   },
   dolomite: {
-    name: "Dolomite Powder",
+    name: "WHITE Dolomite Powder",
     id: "dolomite",
-    description: "Honey Chemicals provides premium Dolomite Powder sourced from high-purity crystalline deposits. Highly valued for its optimal magnesium and calcium carbonate content, our dolomite is a fundamental raw material for industries demanding superior thermal stability and chemical resistance. We process this mineral with precision to ensure it meets the rigorous demands of global manufacturing standards.",
+    description: "Honey Chemicals provides premium WHITE Dolomite Powder sourced from high-purity crystalline deposits. Highly valued for its optimal magnesium and calcium carbonate content, our dolomite is a fundamental raw material for industries demanding superior thermal stability and chemical resistance. We process this mineral with precision to ensure it meets the rigorous demands of global manufacturing standards.",
     images: ["https://lh3.googleusercontent.com/d/1i9kT8A62hrPNmS2Nf6UBFZTwBCugNQyN"],
-    featuresTitle: "Key Technical Features of Our Dolomite Powder",
-    featuresDescription: "Our Dolomite Powder is characterized by its high optical purity and balanced chemical composition, making it ideal for specialized industrial applications:",
+    featuresTitle: "Key Technical Features of Our WHITE Dolomite Powder",
+    featuresDescription: "Our WHITE Dolomite Powder is characterized by its high optical purity and balanced chemical composition, making it ideal for specialized industrial applications:",
     features: [
       "Balanced Magnesium Content: Naturally contains 18-22% MgO, providing superior thermal and chemical stability during high-temperature processing.",
       "High Optical Purity: Offers consistent whiteness and brightness, tailored for high-end ceramics and architectural paint extenders.",
@@ -67,16 +67,16 @@ const PRODUCT_DATA: Record<string, any> = {
       "Low Impurity Profile: Minimal iron and silica content ensures maximum mineral purity, preventing product discoloration or equipment wear.",
       "Diverse Mesh Availability: Available in various fine mesh grades to suit specific formulation requirements in rubber and plastics."
     ],
-    whyChooseTitle: "Why Partner with Honey Chemicals for Dolomite Powder?",
-    whyChooseDescription: "As a leading supplier in India, Honey Chemicals ensures that every batch of Dolomite Powder delivers the reliability and technical excellence your production requires:",
+    whyChooseTitle: "Why Partner with Honey Chemicals for WHITE Dolomite Powder?",
+    whyChooseDescription: "As a leading supplier in India, Honey Chemicals ensures that every batch of WHITE Dolomite Powder delivers the reliability and technical excellence your production requires:",
     whyChoose: [
       { title: "Magnesium-Rich Sourcing", detail: "We extract our mineral from select quarries known for the highest MgO consistency and mineral integrity." },
       { title: "Precision Milling Technology", detail: "Our advanced processing units in Gujarat ensure a narrow particle size distribution for flawless industrial integration." },
       { title: "Rigorous Quality Assurance", detail: "Each lot undergoes comprehensive lab testing to verify CaCO3 and MgO percentages before delivery." },
       { title: "Timely Bulk Supply", detail: "Our robust logistics network guarantees consistent availability and prompt dispatch for high-volume requirements." }
     ],
-    usesTitle: "Broad Applications of Dolomite Powder",
-    usesDescription: "Due to its unique chemical properties and durability, our Dolomite Powder is an essential component in several critical industrial sectors:",
+    usesTitle: "Broad Applications of WHITE Dolomite Powder",
+    usesDescription: "Due to its unique chemical properties and durability, our WHITE Dolomite Powder is an essential component in several critical industrial sectors:",
     uses: [
       { area: "Steel & Iron Industry", detail: "Acts as a critical fluxing agent to remove impurities and provide essential protection for furnace refractory linings." },
       { area: "Glass & Ceramics", detail: "Improves heat resistance, chemical durability, and surface gloss in glass manufacturing and ceramic glazes." },
@@ -122,26 +122,59 @@ const PRODUCT_DATA: Record<string, any> = {
   limestone: {
     name: "Limestone Powder",
     id: "limestone",
-    description: "Limestone Powder is a versatile sedimentary mineral composed primarily of calcium carbonate. Our limestone is meticulously processed to provide consistent particle size and high chemical reactivity, serving as a fundamental raw material for construction, energy, and environmental services.",
-    images: ["https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop"],
+    description: "Limestone, a naturally occurring sedimentary rock composed primarily of calcium carbonate (CaCO3), is a vital resource for numerous industries. By choosing Honey Chemicals as your limestone powder supplier, you can be assured of consistent quality, reliable supply, and technical expertise to meet your specific needs.",
+    images: ["https://lh3.googleusercontent.com/d/1p8PEDBWWaw78kwiLaEClPDnPc2aZQJTO"],
+    comparisonTable: {
+      title: "Limestone Chemical Composition & Physical Specifications",
+      headers: ["Specification", "Typical Value (%)"],
+      sideLabel: "Technical Specs",
+      sections: [
+        {
+          label: "Chemical Profile",
+          rows: [
+            { param: "Calcium Carbonate (CaCO3)", values: ["95.00 - 98.50%"] },
+            { param: "Calcium Oxide (CaO)", values: ["53.00 - 56.00%"] },
+            { param: "Silicon Dioxide (SiO2)", values: ["0.50 - 2.00%"] },
+            { param: "Magnesium Oxide (MgO)", values: ["0.50 - 1.50%"] },
+            { param: "Magnesium Carbonate (MgCO3)", values: ["0.70 - 1.50%"] },
+            { param: "Aluminium Oxide (Al2O3)", values: ["0.02 - 0.10%"] },
+            { param: "Iron Oxide (Fe2O3)", values: ["0.01 - 0.20%"] },
+            { param: "Loss on Ignition (LoI)", values: ["42.00 - 45.00%"] }
+          ]
+        },
+        {
+          label: "Physical Properties",
+          rows: [
+            { param: "Whiteness", values: ["65.00% - 80.00%"] },
+            { param: "Brightness", values: ["63.00% - 78.00%"] }
+          ]
+        }
+      ]
+    },
     features: [
-      "High Chemical Reactivity: Exceptional performance in flue gas desulfurization and water treatment.",
-      "Natural Durability: Strong physical properties suitable for heavy-duty construction applications.",
-      "Controlled Gradation: Available in sizes ranging from coarse granules to fine dust as per project requirements.",
-      "Cost Efficiency: A highly economical mineral solution for large-scale industrial buffering."
+      "Secured Geological Sources: Procured from pure calcitic sedimentary beds for natural, rich calcium structures.",
+      "Excellent Process Integration: Easy dispersion across water-based wall putties, architectural coatings, and polymer masterbatches.",
+      "Optimized Acid Neutralization: Perfect chemistry for pH balance, agricultural liming, and structural water treatment.",
+      "Premium Calcium Feedstock: Ideal mineral grade providing pristine high-assay calcium nourishment in feeds."
     ],
     uses: [
-      { area: "Construction Sector", detail: "Primary ingredient in cement production and high-strength concrete aggregates." },
-      { area: "Environmental Protection", detail: "Used in water treatment facilities to neutralize acids and in power plants for emission control." },
-      { area: "Animal Nutrition", detail: "A vital source of calcium in poultry and livestock feed formulations." },
-      { area: "Glass Manufacturing", detail: "Acts as a stabilizer in soda-lime glass, improving viscosity and chemical resistance." }
+      { area: "Wall Putty", detail: "Provides excellent bulk texture, white base, and exceptionally smooth application qualities." },
+      { area: "Construction Materials", detail: "Essential ingredient in premium cement formulations, durable concrete, and high-strength masonry work." },
+      { area: "Paints & Coatings", detail: "Serves as an effective filler and extender pigment, extending TiO2 and enhancing opacity." },
+      { area: "Paper & Printing", detail: "Acts as a bright mineral filler and coating to enhance surface smoothness and printing ink affinity." },
+      { area: "Agriculture", detail: "Acts as a prime soil conditioner to adjust soil pH, neutralize toxicity, and enrich crops with essential calcium." },
+      { area: "Plastics", detail: "Operates as an economic filler and reinforcing agent to improve overall polymer rigidity and dimensions." },
+      { area: "Glass & Ceramics", detail: "Acts as a high-purity fluxing agent and source of calcia, improving chemical durability." },
+      { area: "Rubber & Adhesives", detail: "Imparts structural body, stiffness, and optimal curing characteristics in vulcanized matrices." },
+      { area: "Water Treatment", detail: "Acts as a reliable acid-neutralizing and filtration agent in municipal and industrial treatment plants." },
+      { area: "Livestock Feed", detail: "Serves as a critical, highly absorbable natural source of calcium supplementation for cattle and poultry diet." }
     ],
     whyChoose: [
-      { title: "Consistent Quality", detail: "Regular testing ensures the CaCO3 content meets the strict demands of industrial buyers." },
-      { title: "Scalable Production", detail: "Our facility is equipped to handle massive volume orders for large-scale infrastructure projects." },
-      { title: "Reliability", detail: "Proven track record as a trusted supplier for major construction and environmental firms." }
+      { title: "Consistent Quality", detail: "Our rigorous laboratory testing ensures that the CaCO3 content remains stable and consistent batch after batch." },
+      { title: "Reliability of Supply", detail: "With secured mineral quarries and massive milling runs, we guarantee a continuous and timely supply chain." },
+      { title: "Technical Expertise", detail: "Our engineering support helps pinpoint the physical mesh and chemistry that aligns perfectly with your production goal." }
     ],
-    packing: "Available in 50kg, 1 Ton Bags, and Loose Bulk"
+    packing: "Available in 25kgs, 50kgs, 1000kgs (1 Ton) and 1250kgs Jumbo Bags"
   },
   "dolomite-uncoated": {
     name: "Dolomite Uncoated Calcium Carbonate",
@@ -170,14 +203,14 @@ const PRODUCT_DATA: Record<string, any> = {
         {
           label: "Chemical Analysis",
           rows: [
-            { param: "CaCO3(%)", values: ["55-56%", "55-56%", "55-56%", "55-56%", "55-56%", "55-56%", "55-56%"] },
-            { param: "CaO(%)", values: ["31-31.5%", "31-31.5%", "31-31.5%", "31-31.5%", "31-31.5%", "31-31.5%", "31-31.5%"] },
-            { param: "MgCo3(%)", values: ["<43%", "<43%", "<43%", "<43%", "<43%", "<43%", "<43%"] },
-            { param: "MgO(%)", values: ["<22%", "<22%", "<22%", "<22%", "<22%", "<22%", "<22%"] },
-            { param: "SiO2(%)", values: ["<2.00%", "<1.50%", "<1.50%", "<1.50%", "<1.50%", "<1.50%", "<1.50%"] },
-            { param: "Fe2O3(%)", values: ["<0.04%", "<0.04%", "<0.04%", "<0.04%", "<0.04%", "<0.04%", "<0.04%"] },
-            { param: "Al2O3(%)", values: ["<0.02%", "<0.02%", "<0.02%", "<0.02%", "<0.02%", "<0.02%", "<0.02%"] },
-            { param: "Hcl Insoluble", values: ["<0.05%", "<0.05%", "<0.05%", "<0.05%", "<0.05%", "<0.05%", "<0.05%"] },
+            { param: "Calcium Carbonate (CaCO3)", values: ["55.00%", "55.00%", "55.00%", "55.00%", "55.00%", "55.00%", "55.00%"] },
+            { param: "Calcium Oxide (CaO)", values: ["30.80%", "30.80%", "30.80%", "30.80%", "30.80%", "30.80%", "30.80%"] },
+            { param: "Magnesium Carbonate (MgCO3)", values: ["43.46%", "43.46%", "43.46%", "43.46%", "43.46%", "43.46%", "43.46%"] },
+            { param: "Magnesium Oxide (MgO)", values: ["21.51%", "21.51%", "21.51%", "21.51%", "21.51%", "21.51%", "21.51%"] },
+            { param: "Silicon Di-Oxide (SiO2)", values: ["0.36%", "0.36%", "0.36%", "0.36%", "0.36%", "0.36%", "0.36%"] },
+            { param: "Ferric Oxide (Fe2O3)", values: ["0.54%", "0.54%", "0.54%", "0.54%", "0.54%", "0.54%", "0.54%"] },
+            { param: "Aluminium Oxide (Al2O3)", values: ["0.14%", "0.14%", "0.14%", "0.14%", "0.14%", "0.14%", "0.14%"] },
+            { param: "Loss on Ignition (LOI)", values: ["46.15%", "46.15%", "46.15%", "46.15%", "46.15%", "46.15%", "46.15%"] },
           ]
         },
         {
@@ -186,12 +219,12 @@ const PRODUCT_DATA: Record<string, any> = {
             { param: "Mean size D50", values: ["5.2 micron", "4.5 micron", "3.7 micron", "2.8 micron", "2 micron", "1.7 micron", "1.5 micron"] },
             { param: "Top cut size D97", values: ["20 micron", "15 micron", "12 micron", "10 micron", "8 micron", "6 micron", "5 micron"] },
             { param: "Mesh", values: ["750", "1000", "1250", "1500", "1875", "2500", "3000"] },
-            { param: "Whiteness", values: ["96", "97", "97", "97", "97", "97", "97"] },
-            { param: "Brightness", values: ["95", "95.5", "95.5", "95.5", "95.5", "95.5", "95.5"] },
+            { param: "Whiteness (Pass In 300#)", values: ["96.80%", "96.80%", "96.80%", "96.80%", "96.80%", "96.80%", "96.80%"] },
+            { param: "Brightness (Pass In 300#)", values: ["95.20%", "95.20%", "95.20%", "95.20%", "95.20%", "95.20%", "95.20%"] },
             { param: "pH value", values: ["8.5", "8.5", "8.5", "8.5", "8.5", "8.5", "8.5"] },
             { param: "Residue on 325 Mesh", values: ["", "", "", "", "", "", ""] },
             { param: "Density kg/m3", values: ["970 kg/m3", "900 kg/m3", "870 kg/m3", "830 kg/m3", "780 kg/m3", "", ""] },
-            { param: "hardness", values: ["3mohs", "3mohs", "3mohs", "3mohs", "3mohs", "3mohs", "3mohs"] }
+            { param: "Hardness", values: ["3.5 - 4 Mohs", "3.5 - 4 Mohs", "3.5 - 4 Mohs", "3.5 - 4 Mohs", "3.5 - 4 Mohs", "3.5 - 4 Mohs", "3.5 - 4 Mohs"] }
           ]
         }
       ]
@@ -730,11 +763,214 @@ const PRODUCT_DATA: Record<string, any> = {
       { area: "Interior Design", detail: "Used for custom furniture, pillars, and bespoke natural stone features in prestige projects." }
     ],
     packing: "Securely Lash-on-Truck & Flatbed Trailers for Heavy-Duty Transport"
+  },
+  "marble-chips": {
+    name: "Marble Chips",
+    id: "marble-chips",
+    description: "Premium Marble Chips of supreme whiteness and superior durability, sourced directly from certified quarries. Available in multiple pre-sorted size fractions, our white marble chips serve as a fundamental raw material for terrazzo flooring, modern interior design, landscaping, and high-end architectural exposed aggregates.",
+    images: ["https://lh3.googleusercontent.com/d/1z2iHy-q20jeYskcwc_vatuTrUvaraTND"],
+    comparisonTable: {
+      title: "Chemical Composition and Physical Characteristics",
+      headers: ["Specification", "Typical Value / Description"],
+      sideLabel: "Technical Specs",
+      sections: [
+        {
+          label: "Chemical Composition",
+          rows: [
+            { param: "Calcium Carbonate (CaCO3)", values: ["95–99%"] },
+            { param: "Magnesium Carbonate (MgCO3)", values: ["<1%"] },
+            { param: "Silica (SiO2)", values: ["<1%"] }
+          ]
+        },
+        {
+          label: "Physical Features",
+          rows: [
+            { param: "Appearance", values: ["Pure white, crystalline, sparkling granules."] },
+            { param: "Hardness", values: ["3-4 Mohs Scale"] },
+            { param: "Available Sizing (Sieve)", values: ["1-3mm, 3-6mm, 6-9mm, 9-12mm (Customizable)"] }
+          ]
+        }
+      ]
+    },
+    featuresTitle: "Key Features of Our Premium Marble Chips",
+    featuresDescription: "Honey Chemicals manufactures marble chips to meet absolute international decorative and construction standards:",
+    features: [
+      "Naturally Sparkling Crystalline: Reflective minerals that retain high whiteness over decades.",
+      "Weather-Resistant Durability: Chemically inert, resisting UV fading, acid rain, and fungal disfigurement.",
+      "Sieve Precision Calibration: Multi-stage mechanical sieve sorting delivers highly uniform size fractions.",
+      "Eco-Friendly Natural Mineral: 100% natural, non-toxic stone product suitable for sustainable construction."
+    ],
+    whyChooseTitle: "Why Partner with Honey Chemicals for Marble Chips?",
+    whyChooseDescription: "As the primary mining and processing partner in India, Honey Chemicals guarantees volume capacity and premium quality:",
+    whyChoose: [
+      "Direct Mining Ownership: We extract and crush from our premier mines, ensuring strict quality control and zero cross-contamination.",
+      "Broad Custom Mesh: Customized grading and size fractions prepared precisely as per industrial specifications.",
+      "High Export Volumes: We are equipped to handle bulk international export containers and large-scale localized shipments."
+    ],
+    usesTitle: "Broad Applications of Our Premium Marble Chips",
+    usesDescription: "Due to their high structural integrity, unique aesthetic texture, and color consistency, our Marble Chips are preferred for:",
+    uses: [
+      { area: "Terrazzo & Resin Flooring", detail: "Provides a highly decorative, hard-wearing aggregate for seamless polymer terrazzo and polished tiles." },
+      { area: "Modern Architectural Landscaping", detail: "Ideal for premium garden ground covers, garden paths, decorative planters, and water features." },
+      { area: "Exposed Aggregate Concrete", detail: "Used as a premium facing stone for exposed panels, swimming pool surrounds, and wash-concrete walls." }
+    ],
+    packing: "Available in 25kgs, 50kgs standard bags and 1 Ton Jumbo Bags"
+  },
+  "grey-dolomite": {
+    name: "Grey Dolomite Powder",
+    id: "grey-dolomite",
+    description: "Honey Chemicals provides premier industrial-grade Grey Dolomite Powder sourced from certified mineral quarries. Rich in optimal magnesium and calcium carbonate, our grey dolomite is specifically processed to deliver robust density, outstanding thermal stability, and maximum cost efficiency for heavy industries, including steel, glass, and agriculture.",
+    images: ["https://lh3.googleusercontent.com/d/1M8__CnPpxU3CV2tKwE0wB3X8HlXvP7Vu"],
+    comparisonTable: {
+      title: "Chemical Composition and Physical Specifications",
+      headers: ["Specification", "Typical Value / Description"],
+      sideLabel: "Technical Specs",
+      sections: [
+        {
+          label: "Chemical Analysis",
+          rows: [
+            { param: "Magnesium Oxide (MgO)", values: ["20.73%"] },
+            { param: "Calcium Oxide (CaO)", values: ["30.81%"] },
+            { param: "Silicon Dioxide (SiO2)", values: ["1.19%"] },
+            { param: "Aluminium Oxide (Al2O3)", values: ["0.38%"] },
+            { param: "Iron Oxide (Fe2O3)", values: ["0.08%"] },
+            { param: "Titanium Dioxide (TiO2)", values: ["Trace"] },
+            { param: "Potassium Oxide (K2O)", values: ["0.09%"] },
+            { param: "Sodium Oxide (Na2O)", values: ["0.51%"] },
+            { param: "Loss on Ignition (LOI)", values: ["45.87%"] }
+          ]
+        },
+        {
+          label: "Physical Properties",
+          rows: [
+            { param: "Whiteness", values: ["88.21%"] },
+            { param: "L* (Brightness)", values: ["95.19"] },
+            { param: "a*", values: ["-0.03"] },
+            { param: "b*", values: ["4.87"] },
+            { param: "Shrinkage", values: ["1.45%"] },
+            { param: "Loss on Ignition (Physical)", values: ["46.86%"] },
+            { param: "Residue (350 # mesh)", values: ["0.48%"] },
+            { param: "Firing Temperature", values: ["1191°C - 1195°C"] },
+            { param: "Firing Cycle", values: ["48 Min."] },
+            { param: "Hardness", values: ["3.5 - 4 Mohs Scale"] },
+            { param: "Specific Gravity", values: ["2.84"] }
+          ]
+        }
+      ]
+    },
+    featuresTitle: "Key Features of Our Grey Dolomite Powder",
+    featuresDescription: "Naturally optimized composition tailored specifically for heavy industrial applications:",
+    features: [
+      "Excellent Refractory Support: High MgO content enhances thermal resistance in high-temperature blast furnaces.",
+      "Cost-Efficient Heavy Filler: Increases product density and mechanical strength at a reduced commodity price.",
+      "High Acid-Neutralizing Capacity: Highly effective as a slow-release soil conditioner and chemical buffer.",
+      "Consistent Sieve Fractions: Micronized with narrow top-cuts to ensure perfect dispersion during bulk batching."
+    ],
+    whyChooseTitle: "Why Partner with Honey Chemicals for Grey Dolomite Powder?",
+    whyChooseDescription: "Honey Chemicals guarantees consistent supply channels, stringent quality testing, and robust logistic support:",
+    whyChoose: [
+      "Direct Quarry Access: Extracted and milled under strict operational control, guaranteeing zero external organic contamination.",
+      "Highly Scalable Production: Our modern processing plants are designed to operate high-output campaigns for large-scale steel and metallurgy contracts.",
+      "Global Container Dispatch: Seamless bulk sea and land shipments configured to match fast-paced industrial lead-times."
+    ],
+    usesTitle: "Broad Applications of Grey Dolomite Powder",
+    usesDescription: "Because of its unique chemical composition and low brightness premium properties, our Grey Dolomite is ideal for:",
+    uses: [
+      { area: "Steel Refining & Fluxing", detail: "Acts as a fluxing agent to neutralize acidic slags, protecting dolomite-based refractory linings in ladles." },
+      { area: "Agricultural Fertilisers", detail: "Provides secondary nutrients (Mg and Ca) to correct pH balances, improving crop yields and nutrient intake." },
+      { area: "Glass & Coal Tar Asphalt", detail: "A vital stabilizer in building commercial container glass, and as a filler for structural asphalt roofing sheets." }
+    ],
+    packing: "Available in 25kgs, 50kgs bags and 1-1.2 Ton heavy jumbo bags"
+  },
+  "calcium-carbonate": {
+    name: "Calcium Carbonate",
+    id: "calcium-carbonate",
+    description: "Honey Chemicals supplies premium industrial grade Calcium Carbonate of high mineral purity, sourced from selective high-purity crystalline calcitic quarries. It serves as a vital raw material for compound production, paper fillers, coatings, PVC formulations, rubber fabrication, and chemical synthesis. Our advanced milling operations guarantee consistent particle size distribution, outstanding geological whiteness, and optimal chemical reactivity.",
+    images: ["https://lh3.googleusercontent.com/d/15cPGXC3BUAWXtBX7HjaF5PGm9HoZr7G_"],
+    comparisonTable: {
+      title: "Chemical Composition and Physical Specifications",
+      headers: ["Specification", "Typical Value / Description"],
+      sideLabel: "Technical Specs",
+      sections: [
+        {
+          label: "Chemical Composition",
+          rows: [
+            { param: "Calcium Carbonate (CaCO3)", values: ["> 98.2%"] },
+            { param: "Silica (SiO2)", values: ["< 0.15%"] },
+            { param: "Magnesium Oxide (MgO)", values: ["< 0.40%"] },
+            { param: "Iron Oxide (Fe2O3)", values: ["< 0.05%"] }
+          ]
+        },
+        {
+          label: "Physical Characteristics",
+          rows: [
+            { param: "Appearance", values: ["Super fine white crystalline dry powder."] },
+            { param: "Whiteness / Index", values: ["96.5% - 98.0%"] },
+            { param: "Hardness", values: ["3.0 Mohs Scale"] },
+            { param: "Specific Gravity", values: ["2.71"] },
+            { param: "Moisture Content", values: ["< 0.10%"] }
+          ]
+        }
+      ]
+    },
+    featuresTitle: "Key Features of Calcium Carbonate",
+    featuresDescription: "Engineered for excellence with high performance characteristics:",
+    features: [
+      "Ultra-High Purity CaCO3: Sourced directly from elite mineral structures for zero contamination.",
+      "Exceptional Whiteness & Brightness: Offers natural pigment extension and pristine finish in coatings/polymers.",
+      "Low Silica Content: Extends the life and lowers wear of processing machinery and extrusion screws.",
+      "Controlled Micro-Fractions: Milled down to exact client sieve curves for premium dispersion properties."
+    ],
+    whyChooseTitle: "Why Partner with Honey Chemicals for Calcium Carbonate?",
+    whyChooseDescription: "Our technical integration and supply excellence make us a leading global supplier:",
+    whyChoose: [
+      "Secured Quarry Deposits: Full quality assurance from excavation through automated refining streams.",
+      "Unmatched Particle Control: Utilizing German-engineered air-classifiers to deliver pristine top-cuts.",
+      "Flexible Packaging Formats: Available across multiple bag sizes with fast lead-times."
+    ],
+    usesTitle: "Broad Applications of Calcium Carbonate",
+    usesDescription: "Because of its superb mineral composition and high whiteness, our Calcium Carbonate is ideal for:",
+    uses: [
+      { area: "PVC & Plastics compounding", detail: "Enhances impact resistance, tensile strength, and structural dimensional stability in rigid profiles and pipes." },
+      { area: "Paints & Premium Coatings", detail: "Acts as a primary TiO2 pigment extender, improving opacity, dry hide, and coating durability." },
+      { area: "Paper & Cardboard", detail: "Improves overall paper brightness, surface smoothness, and opacity while lowering raw material production costs." }
+    ],
+    packing: "Available in 25kgs, 50kgs standard bags and 1 Ton heavy duty jumbo packing"
   }
+};
+
+const REMOVED_PRODUCTS = new Set([
+  "indigenous-calcium-carbonate",
+  "vietnam-calcium-carbonate",
+  "malaysia-calcium-carbonate",
+  "egypt-calcium-carbonate",
+  "marble-blocks",
+  "indigenous-uncoated",
+  "indigenous-coated",
+  "vietnam-uncoated",
+  "vietnam-coated",
+  "malaysia-uncoated",
+  "malaysia-coated",
+  "egypt-uncoated",
+  "egypt-coated",
+  "dolomite-uncoated"
+]);
+
+const SUB_PRODUCT_REDIRECTS: Record<string, string> = {
+  "dolomite-coated": "dolomite"
 };
 
 const ProductDetail = () => {
   const { id } = useParams();
+
+  if (id && REMOVED_PRODUCTS.has(id)) {
+    return <Navigate to="/" replace />;
+  }
+
+  if (id && SUB_PRODUCT_REDIRECTS[id]) {
+    return <Navigate to={`/product/${SUB_PRODUCT_REDIRECTS[id]}`} replace />;
+  }
+
   const product = PRODUCT_DATA[id || ""] || PRODUCT_DATA.calcite;
 
   return (
@@ -782,12 +1018,6 @@ const ProductDetail = () => {
                 className="w-full lg:w-[35%] shrink-0 sticky top-32"
               >
                 <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl border-4 border-white aspect-[4/5] lg:aspect-auto">
-                  {product.isPremium && (
-                    <div className="absolute top-6 right-6 bg-red-700 text-white text-xs font-black px-4 py-2 rounded-full z-20 flex items-center shadow-xl">
-                      <Diamond className="w-4 h-4 mr-2" />
-                      PREMIUM QUALITY
-                    </div>
-                  )}
                   <img 
                     src={product.images[0]} 
                     alt={product.name} 

@@ -2,5 +2,7 @@
   "name": "Honey Chemicals",
   "description": "Leading Producer of Premium Ultrafine Minerals specializing in Calcite, Dolomite, and Calcium Carbonate.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

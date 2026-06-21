@@ -45,13 +45,12 @@ export const Footer = () => {
             <h4 className="text-[11px] font-black uppercase tracking-[0.3em] mb-10 text-white/40">Products</h4>
             <div className="flex flex-col space-y-4">
               <Link to="/product/calcite" className="text-slate-300 hover:text-red-500 transition-colors text-base font-semibold tracking-wide">Calcite Powder</Link>
-              <Link to="/product/dolomite" className="text-slate-300 hover:text-red-500 transition-colors text-base font-semibold tracking-wide">Dolomite Powder</Link>
-              <Link to="/product/indigenous-calcium-carbonate" className="text-slate-300 hover:text-red-500 transition-colors text-base font-semibold tracking-wide">Indigenous Calcium Carbonate</Link>
-              <Link to="/product/vietnam-calcium-carbonate" className="text-slate-300 hover:text-red-500 transition-colors text-base font-semibold tracking-wide">Vietnam Calcium Carbonate</Link>
-              <Link to="/product/egypt-calcium-carbonate" className="text-slate-300 hover:text-red-500 transition-colors text-base font-semibold tracking-wide">Egypt Calcium Carbonate</Link>
-              <Link to="/product/malaysia-calcium-carbonate" className="text-slate-300 hover:text-red-500 transition-colors text-base font-semibold tracking-wide">Malaysia Calcium Carbonate</Link>
+              <Link to="/product/dolomite" className="text-slate-300 hover:text-red-500 transition-colors text-base font-semibold tracking-wide">WHITE Dolomite Powder</Link>
+              <Link to="/product/grey-dolomite" className="text-slate-300 hover:text-red-500 transition-colors text-base font-semibold tracking-wide">Grey Dolomite Powder</Link>
+              <Link to="/product/limestone" className="text-slate-300 hover:text-red-500 transition-colors text-base font-semibold tracking-wide">Limestone Powder</Link>
+              <Link to="/product/calcium-carbonate" className="text-slate-300 hover:text-red-500 transition-colors text-base font-semibold tracking-wide">Calcium Carbonate</Link>
+              <Link to="/product/marble-chips" className="text-slate-300 hover:text-red-500 transition-colors text-base font-semibold tracking-wide">Marble Chips</Link>
               <Link to="/product/marbles-lumps" className="text-slate-300 hover:text-red-500 transition-colors text-base font-semibold tracking-wide">Marbles Lumps</Link>
-              <Link to="/product/marble-blocks" className="text-slate-300 hover:text-red-500 transition-colors text-base font-semibold tracking-wide">Marble Blocks</Link>
             </div>
           </div>
 
@@ -106,7 +105,14 @@ export const Footer = () => {
         <div className="text-right">
           <p className="text-[10px] items-center space-x-1 inline-flex opacity-50 font-bold tracking-tight">
             <span>Web Design by</span>
-            <span className="text-white hover:text-red-500 cursor-pointer transition-colors">raghav digital</span>
+            <a 
+              href="https://wa.me/918469608713" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-white hover:text-red-500 cursor-pointer transition-colors font-bold"
+            >
+              raghav digital
+            </a>
           </p>
         </div>
       </div>

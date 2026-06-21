@@ -11,6 +11,7 @@ import {
   ShieldCheck,
   Zap
 } from "lucide-react";
+import { IndustrialWatermark } from "../components/IndustrialWatermark";
 
 const PROCESS_STEPS = [
   { 
@@ -97,7 +98,11 @@ const GrindingProcess = () => {
       </section>
 
       {/* Main Process Content */}
-      <section className="pt-24 pb-12">
+      <section className="pt-24 pb-12 relative overflow-hidden">
+        {/* Subtle Industrial Watermark Background */}
+        <IndustrialWatermark className="absolute bottom-0 right-[1%] w-[40%] h-[75%] pointer-events-none opacity-[0.05] select-none" />
+        <IndustrialWatermark className="absolute top-[10%] left-[2%] w-[30%] h-[50%] pointer-events-none opacity-[0.03] scale-x-[-1] select-none" />
+
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-start">
             
@@ -237,7 +242,7 @@ const GrindingProcess = () => {
            </div>
            <div className="md:w-1/2 relative min-h-[400px]">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200" 
+                src="https://lh3.googleusercontent.com/d/1m4OFycZpn4Eug34NOHEUpwwRBxnGFHZP" 
                 alt="Grinding factory"
                 className="absolute inset-0 w-full h-full object-cover"
                 referrerPolicy="no-referrer"

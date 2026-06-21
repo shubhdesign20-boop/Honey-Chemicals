@@ -16,6 +16,7 @@ import Industries from "./pages/Industries";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import ProductDetail from "./pages/ProductDetail";
+import Gallery from "./pages/Gallery";
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -52,6 +53,7 @@ export default function App() {
             <Route path="/operations/infrastructure" element={<Infrastructure />} />
             <Route path="/operations/grinding" element={<GrindingProcess />} />
             <Route path="/operations/packaging" element={<Packaging />} />
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="/product/:id" element={<ProductDetail />} />
           </Routes>
         </main>

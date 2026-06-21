@@ -13,7 +13,7 @@ const Packaging = () => {
   return (
     <div className="pt-24 min-h-screen bg-white">
       <section className="bg-slate-900 text-white py-20">
-        <div className="max-w-full mx-auto px-6 md:px-12 lg:px-16">
+        <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -28,13 +28,13 @@ const Packaging = () => {
       </section>
 
       <section className="py-24">
-        <div className="max-w-full mx-auto px-6 md:px-12 lg:px-16">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-12 gap-16 items-center mb-24">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="lg:col-span-4"
+              className="lg:col-span-5"
             >
               <h2 className="text-3xl font-black text-slate-900 mb-6">STRENGTH & PROTECTION</h2>
               <p className="text-slate-600 mb-6 leading-relaxed text-lg font-medium">
@@ -57,7 +57,7 @@ const Packaging = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="lg:col-span-8 w-full h-full flex justify-center"
+              className="lg:col-span-7 w-full h-full flex justify-center"
             >
               <div className="w-full">
                 <img 

@@ -1,11 +1,10 @@
 @import "tailwindcss";
 
 @layer base {
-  html, body, #root, main, .main-wrapper, .app-wrapper {
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
+  html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
   }
@@ -21,11 +20,5 @@
 @layer utilities {
   .clip-path-industrial {
     clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%);
-  }
-  
-  /* Enforce full-width container rendering across all components */
-  .max-w-7xl, .container {
-    max-width: 100% !important;
-    width: 100% !important;
   }
 }
